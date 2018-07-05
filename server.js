@@ -51,7 +51,12 @@ app.get('/', (req, res) => { //args = req: contains reqs info coming in
 	});
 });
 
-
+app.get('/projects', (req, res) => {
+	res.render('projects.hbs', {
+		pageTitle: 'Projects Page',
+		projectMessage: 'Portfolio page here'
+	});
+});
 
 app.get('/about', (req, res) => {
 	res.render('about.hbs', {
